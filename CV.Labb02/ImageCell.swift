@@ -23,4 +23,10 @@ class ImageCell: UITableViewCell {
     dateLable.text = work.date
         
     }
+    
+    func firstEducation(education: Education){
+        experienceImageView.image = education.educationImage
+        workTitleLable.text = education.title
+        dateLable.text = education.date
+    }
 }
