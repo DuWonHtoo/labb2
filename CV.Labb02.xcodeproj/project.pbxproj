@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41024922237C2402008BC464 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024921237C2402008BC464 /* SkillsViewController.swift */; };
 		4141B56623758CB1006BBCFE /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4141B56523758CB1006BBCFE /* ExperienceViewController.swift */; };
 		419A99082372EA30006491D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419A99072372EA30006491D3 /* AppDelegate.swift */; };
 		419A990A2372EA30006491D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419A99092372EA30006491D3 /* SceneDelegate.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41024921237C2402008BC464 /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		4141B56523758CB1006BBCFE /* ExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
 		419A99042372EA30006491D3 /* CV.Labb02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CV.Labb02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		419A99072372EA30006491D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,13 +110,14 @@
 			isa = PBXGroup;
 			children = (
 				419A99072372EA30006491D3 /* AppDelegate.swift */,
-				419A99092372EA30006491D3 /* SceneDelegate.swift */,
-				419A990B2372EA30006491D3 /* ViewController.swift */,
-				419A993723731B0D006491D3 /* ImageCell.swift */,
-				419A993923731DBD006491D3 /* Work.swift */,
-				419A990D2372EA30006491D3 /* Main.storyboard */,
-				41DB619F237AB37600A64A17 /* SecondExperienceViewController.swift */,
 				4141B56523758CB1006BBCFE /* ExperienceViewController.swift */,
+				419A993723731B0D006491D3 /* ImageCell.swift */,
+				419A990D2372EA30006491D3 /* Main.storyboard */,
+				41024921237C2402008BC464 /* SkillsViewController.swift */,
+				419A99092372EA30006491D3 /* SceneDelegate.swift */,
+				41DB619F237AB37600A64A17 /* SecondExperienceViewController.swift */,
+				419A990B2372EA30006491D3 /* ViewController.swift */,
+				419A993923731DBD006491D3 /* Work.swift */,
 				419A99102372EA32006491D3 /* Assets.xcassets */,
 				419A99122372EA32006491D3 /* LaunchScreen.storyboard */,
 				419A99152372EA32006491D3 /* Info.plist */,
@@ -277,6 +280,7 @@
 				419A99082372EA30006491D3 /* AppDelegate.swift in Sources */,
 				419A990A2372EA30006491D3 /* SceneDelegate.swift in Sources */,
 				419A993A23731DBD006491D3 /* Work.swift in Sources */,
+				41024922237C2402008BC464 /* SkillsViewController.swift in Sources */,
 				41DB61A0237AB37600A64A17 /* SecondExperienceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

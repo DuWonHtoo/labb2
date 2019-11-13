@@ -24,41 +24,43 @@ class ExperienceViewController: UIViewController {
         work = createArray()
         education = createArrayEducation()
         
-}
+    }
 
         func createArray()->[Work] {
             var tempJobs: [Work] = []
             
-            let firstJob = Work(workImage: UIImage(named: "Audi-Logo")!, title: "CEO of Audi", date: "2014-2016",text: "Hello this is about my first job")
-            let secondJob = Work(workImage: UIImage(named: "Merc-Logo")!, title: "CEO of Mercedez", date: "2016-2018", text: "Hello this is about my 2nd job")
-            let thirdJob = Work(workImage: UIImage(named: "Apple")!, title: "CEO of Apple", date: "2018-2020", text: "Hello this is about my 3rd job")
+            let firstJob = Work(workImage: UIImage(named: "Audi-Logo")!, title: "CEO of Audi", date: "2014-2016",text: "Hello this is my first job")
+            let secondJob = Work(workImage: UIImage(named: "Merc-Logo")!, title: "CEO of Mercedez", date: "2016-2018", text: "Hello this is my 2nd job")
+            let thirdJob = Work(workImage: UIImage(named: "Apple")!, title: "CEO of Apple", date: "2018-2020", text: "Hello this is my 3rd job")
             
             tempJobs.append(firstJob)
             tempJobs.append(secondJob)
             tempJobs.append(thirdJob)
             
             return tempJobs
-        }
+    }
     
         func createArrayEducation()->[Education]{
             var education: [Education] = []
         
-            let firstEducation = Education(educationImage: UIImage(named: "Book-Logo")!, title: "Education", date: "2020", text:"My first Education" )
+            let firstEducation = Education(educationImage: UIImage(named: "Book-Logo")!, title: "Education", date: "2020", text:"DMP, Jönköping University" )
         
             education.append(firstEducation)
         
             return education
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "MasterToDetail"{
-            let destSecondEVC = segue.destination as! SecondExperienceViewController
-            destSecondEVC.work = sender as? Work
+        if let destSecondEVC = segue.destination as? SecondExperienceViewController{
+            if let work = sender as? Work{
+                destSecondEVC.work = work
+            }
+            else if let education = sender as? Education{
+                destSecondEVC.education = education
+            }
         }
     }
-    
 }
-
 extension ExperienceViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -101,8 +103,14 @@ extension ExperienceViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        let Work = work[indexPath.row]
-        performSegue(withIdentifier: "MasterToDetail", sender: Work)
+        if indexPath.section == 0 {
+            let Work = work[indexPath.row]
+            performSegue(withIdentifier: "MasterToDetail", sender: Work)
+        }
+        else{
+            let Education = education[indexPath.row]
+            performSegue(withIdentifier: "MasterToDetail", sender: Education)
+        }
     }
-  
 }
+

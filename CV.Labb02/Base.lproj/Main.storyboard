@@ -78,7 +78,7 @@ Summo aperiam eu pri. Vim invidunt perpetua ad, cu mel elit erat platonem. Ad mo
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="FPC-Ru-GbM" kind="show" identifier="Skills" id="czP-Mr-GEh"/>
+                                    <segue destination="h20-ua-QaF" kind="presentation" id="xNv-FW-q5H"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjW-Ir-SZd">
@@ -115,23 +115,60 @@ Summo aperiam eu pri. Vim invidunt perpetua ad, cu mel elit erat platonem. Ad mo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="138.0809595202399"/>
+            <point key="canvasLocation" x="1396" y="-68"/>
         </scene>
-        <!--Skills-->
-        <scene sceneID="zXW-BE-YtG">
+        <!--Skills View Controller-->
+        <scene sceneID="1Sw-tf-g0Y">
             <objects>
-                <viewController id="FPC-Ru-GbM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kEj-ue-LLL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="h20-ua-QaF" customClass="SkillsViewController" customModule="CV_Labb02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MWR-iG-bDV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IgV-Fg-7Il">
+                                <rect key="frame" x="134" y="75" width="99" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="block" translatesAutoresizingMaskIntoConstraints="NO" id="P3l-uW-2xj">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dZ-Ed-X7N">
+                                <rect key="frame" x="138" y="0.0" width="99" height="30"/>
+                                <state key="normal" title="DropThisBlock"/>
+                                <connections>
+                                    <action selector="DropButton" destination="h20-ua-QaF" eventType="touchUpInside" id="sJA-ee-Zh8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbA-cz-pCO">
+                                <rect key="frame" x="325" y="20" width="30" height="30"/>
+                                <state key="normal" title="Exit"/>
+                                <connections>
+                                    <action selector="ExitButton" destination="h20-ua-QaF" eventType="touchUpInside" id="8FP-g9-ELl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="FWS-bx-G8n"/>
+                        <constraints>
+                            <constraint firstItem="8dZ-Ed-X7N" firstAttribute="leading" secondItem="n04-fd-wF7" secondAttribute="leading" constant="138" id="334-qU-uJT"/>
+                            <constraint firstItem="n04-fd-wF7" firstAttribute="trailing" secondItem="DbA-cz-pCO" secondAttribute="trailing" constant="20" id="7It-Wd-mry"/>
+                            <constraint firstItem="DbA-cz-pCO" firstAttribute="top" secondItem="n04-fd-wF7" secondAttribute="top" constant="20" id="8rD-ID-FjI"/>
+                            <constraint firstItem="n04-fd-wF7" firstAttribute="trailing" secondItem="8dZ-Ed-X7N" secondAttribute="trailing" constant="138" id="CT1-pN-nMX"/>
+                            <constraint firstItem="8dZ-Ed-X7N" firstAttribute="top" secondItem="n04-fd-wF7" secondAttribute="top" id="hoc-nJ-yrM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n04-fd-wF7"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Skills" id="eyy-M2-PKC"/>
+                    <navigationItem key="navigationItem" id="wcd-j3-XE7"/>
+                    <connections>
+                        <outlet property="purpleBlock" destination="IgV-Fg-7Il" id="wpA-L4-thd"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yhk-lj-RQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QIZ-js-fEC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2007" y="366"/>
+            <point key="canvasLocation" x="2368.8000000000002" y="597.75112443778119"/>
         </scene>
         <!--Experiences-->
         <scene sceneID="kbh-0R-QMv">
@@ -302,10 +339,11 @@ Summo aperiam eu pri. Vim invidunt perpetua ad, cu mel elit erat platonem. Ad mo
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIM-EM-97M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65.217391304347828" y="138.61607142857142"/>
+            <point key="canvasLocation" x="-47" y="-69"/>
         </scene>
     </scenes>
     <resources>
+        <image name="block" width="200" height="200"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>

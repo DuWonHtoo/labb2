@@ -17,13 +17,20 @@ class SecondExperienceViewController: UIViewController {
     @IBOutlet weak var ExperienceTextView2: UILabel!
     
     var work: Work?
+    var education: Education?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        
+        if work != nil {
+            setUIWork()
+        }
+        else {
+            setUIEducation()
+        }
     }
     
-    func setUI(){
+    func setUIWork(){
         
         ExperienceImageView2.image = work?.workImage
         ExperienceTitleView2.text = work?.title
@@ -31,5 +38,11 @@ class SecondExperienceViewController: UIViewController {
         ExperienceTextView2.text = work?.text
     }
  
-
+    func setUIEducation(){
+        
+        ExperienceImageView2.image = education?.educationImage
+        ExperienceTitleView2.text = education?.title
+        ExperienceDateView2.text = education?.date
+        ExperienceTextView2.text = education?.text
+    }
 }
